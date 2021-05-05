@@ -42,8 +42,7 @@ const deleteEmployee = async () => {
 };
 
 const listAllEmployee = async () => {
-  const allEmployeesFullNames = await Employee.find({
-    first_name} + {last_name});
+  const allEmployeesFullNames = await Employee.find({ first_name } + { last_name });
   console.log('All Employees: ', allEmployeesFullNames);
 };
 
@@ -52,8 +51,7 @@ const run = async () => {
   await createEmployee();
   await updateEmployee();
   await deleteEmployee();
-
-  await findAllEmployee();
+  await listAllEmployee();
 
   db.close();
 };
